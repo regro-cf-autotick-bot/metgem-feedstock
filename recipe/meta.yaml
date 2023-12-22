@@ -1,4 +1,4 @@
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: metgem
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/metgem/metgem/archive/v{{ version }}.tar.gz
-  sha256: 1e328f2e74c97724d38df2f917de79535b8a6330e310c91986588b8bd31bf198
+  sha256: 8c5e1a2ba526db07b9b3246ab9758d897730696b5f9ee5b02245a7882e3b8381
 
 build:
   noarch: python
@@ -50,7 +50,7 @@ requirements:
     - requests >=2.18
     - sqlalchemy >=1.2
     - click >=8.0
-    
+
 test:
   imports:
     - metgem
@@ -123,5 +123,5 @@ about:
   dev_url: 'https://github.com/metgem/metgem'
 
 extra:
-  recipe-maintainers: 
+  recipe-maintainers:
     - n-elie
