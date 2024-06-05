@@ -1,4 +1,4 @@
-{% set version = "1.4.3" %}
+{% set version = "1.5.1" %}
 
 package:
   name: metgem
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/metgem/metgem/archive/v{{ version }}.tar.gz
-  sha256: 8c5e1a2ba526db07b9b3246ab9758d897730696b5f9ee5b02245a7882e3b8381
+  sha256: 7eb08d9b6f25f94b65644e897bff94f75251d7d534d298aa7b9e1e1a66b8b84d
 
 build:
   noarch: python
