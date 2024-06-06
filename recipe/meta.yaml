@@ -27,16 +27,16 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - pandas >=0.22
     - python-igraph >=0.7.1
-    - scikit-learn >=0.19
+    - scikit-learn >=1.5
     - scipy >=1.0.0
     - pyarrow >=0.15.1
-    - libmetgem >=0.6.4
-    - fa2 >=0.3.5
+    - libmetgem >=0.7.0
+    - fa2_modified >=0.3.10
     - lxml >=4.0
   run_constrained:
     - qtconsole-base >=4.3
-    - pyside6mn >=0.7.1
-    - pyside6qtads >=4.0
+    - pyside6mn >=0.7.6
+    - pyside6qtads >=4.1.0
     - pyemf3 >=3.3
     - matplotlib-base >=2.2
     - pluginbase >=1.0
