@@ -1,4 +1,4 @@
-{% set version = "1.4.3" %}
+{% set version = "1.5.0" %}
 
 package:
   name: metgem
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/metgem/metgem/archive/v{{ version }}.tar.gz
-  sha256: 8c5e1a2ba526db07b9b3246ab9758d897730696b5f9ee5b02245a7882e3b8381
+  sha256: 89d0f91ec19619e18cd89cc858591a1cdd62d4c0a0f66d0914d3e968971e87aa
 
 build:
   noarch: python
@@ -27,16 +27,16 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - pandas >=0.22
     - python-igraph >=0.7.1
-    - scikit-learn >=0.19
+    - scikit-learn >=1.5
     - scipy >=1.0.0
     - pyarrow >=0.15.1
     - libmetgem >=0.6.4
-    - fa2 >=0.3.5
+    - fa2_modified >=0.3.10
     - lxml >=4.0
   run_constrained:
     - qtconsole-base >=4.3
-    - pyside6mn >=0.7.1
-    - pyside6qtads >=4.0
+    - pyside6mn >=0.7.5
+    - pyside6qtads >=4.1.0
     - pyemf3 >=3.3
     - matplotlib-base >=2.2
     - pluginbase >=1.0
