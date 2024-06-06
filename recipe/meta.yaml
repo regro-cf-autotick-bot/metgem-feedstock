@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 
 package:
   name: metgem
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/metgem/metgem/archive/v{{ version }}.tar.gz
-  sha256: 89d0f91ec19619e18cd89cc858591a1cdd62d4c0a0f66d0914d3e968971e87aa
+  sha256: 7eb08d9b6f25f94b65644e897bff94f75251d7d534d298aa7b9e1e1a66b8b84d
 
 build:
   noarch: python
@@ -30,12 +30,12 @@ requirements:
     - scikit-learn >=1.5
     - scipy >=1.0.0
     - pyarrow >=0.15.1
-    - libmetgem >=0.6.4
+    - libmetgem >=0.7.0
     - fa2_modified >=0.3.10
     - lxml >=4.0
   run_constrained:
     - qtconsole-base >=4.3
-    - pyside6mn >=0.7.5
+    - pyside6mn >=0.7.6
     - pyside6qtads >=4.1.0
     - pyemf3 >=3.3
     - matplotlib-base >=2.2
