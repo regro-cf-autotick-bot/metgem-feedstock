@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set version = "1.5.2" %}
 
 package:
@@ -10,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
   entry_points:
     - MetGem = metgem.gui:run
@@ -18,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - pyside6
     - versioneer
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - {{ pin_compatible('numpy') }}
     - pandas >=0.22
     - python-igraph >=0.7.1
@@ -52,6 +53,8 @@ requirements:
     - click >=8.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - metgem
 
@@ -65,7 +68,7 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python
+        - python {{ python_min }}
       run:
         - {{ pin_subpackage('metgem', exact=True) }}
         - qtconsole-base
@@ -96,6 +99,7 @@ outputs:
         - {{ cdt('libdrm-devel') }}          # [linux]
         - {{ cdt('libglvnd-glx') }}          # [linux]
         - {{ cdt('libglvnd-egl') }}          # [linux]
+        - python {{ python_min }}
       commands:
         - MetGem --help
 
@@ -104,11 +108,13 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python
+        - python {{ python_min }}
       run:
         - {{ pin_subpackage('metgem', exact=True) }}
         - click >=8.0
     test:
+      requires:
+        - python {{ python_min }}
       commands:
         - metgem-cli --help
 
