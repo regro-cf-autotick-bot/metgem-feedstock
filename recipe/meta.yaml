@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/metgem/metgem/archive/v{{ version }}.tar.gz
-  sha256: 4350dbd52be60ed998b564cb823feebe036d8c1f68facf68c48849aebadfc89e
+  sha256: b70fc069b0afae3d44b1cf94047883f7c309dcdf3755df0c7700021f8b7e5e80
 
 build:
   noarch: python
@@ -23,6 +23,7 @@ requirements:
     - pip
     - pyside6
     - versioneer
+    - setuptools
   run:
     - python >={{ python_min }}
     - {{ pin_compatible('numpy') }}
